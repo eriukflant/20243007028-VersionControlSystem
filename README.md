@@ -3,7 +3,7 @@
 Student ID: 20243007028  
 COMPX202 Practical 3
 
-Cloned [the provided project](https://github.com/jibrilmuhammadadam/Practical3_GitHub.git) using HTTPS. The original Commit 001 (`85bd8ad`) is preserved. This repository was created empty, then `origin` was changed to this repository before pushing the existing history.
+Started from [the provided project](https://github.com/jibrilmuhammadadam/Practical3_GitHub.git), cloned over HTTPS. Commit 001 (`85bd8ad`) is the original commit. This repository was created empty before changing `origin` and pushing the project.
 
 ## Changes
 
@@ -14,22 +14,20 @@ Cloned [the provided project](https://github.com/jibrilmuhammadadam/Practical3_G
 | 003 | Added Cancel beside Log In | [View](screenshots/commit-003.png) |
 | 004 | Changed both buttons to black | [View](screenshots/commit-004.png) |
 
-Commit 004 was made on `feature-button-background-color`. The branch was pushed, then merged into `master`. Both branches are kept on GitHub. The merge has its own commit so it is visible in `git log --graph --all --oneline`.
+Commit 004 was made on `feature-button-background-color`, pushed, and merged into `master`. Both branches are on GitHub.
 
 ## Running
 
-Open this folder in Android Studio, let Gradle sync, and run `app` on an emulator. The project uses the starter's Gradle 9.6.0, Android Gradle Plugin 9.4.1 and SDK 37 settings. Its Gradle daemon configuration uses JDK 25.
+Open the project in Android Studio, sync Gradle, and run `app`. The starter uses Gradle 9.6.0, AGP 9.4.1, SDK 37 and JDK 25.
 
-Each UI stage was built and run on Pixel 7 (API 36). The screenshots above were captured from the emulator. The final build, Lint check and the starter's unit test passed.
+Tested each stage on Pixel 7 (API 36). Build, Lint and the included unit test passed.
 
-For Windows with a Chinese user folder, the unit test command used was:
+On Windows, this command avoids an encoding error when the user folder has non-ASCII characters:
 
 ```powershell
 .\gradlew.bat --no-daemon '-Dorg.gradle.jvmargs=-Xmx2048m -Dfile.encoding=COMPAT' testDebugUnitTest lintDebug
 ```
 
-`local.properties` and build outputs are ignored by Git.
-
 ## Reflection
 
-Small commits make it easier to locate a bug and recover an earlier version. Branches let developers try a change without changing the main version. Pulling and merging bring work together, while a remote repository gives the team a shared history to review.
+In a larger project, developers can work on separate branches and merge their changes after testing. Small commits help the team find where a bug started and restore an earlier version. A shared remote lets everyone pull the latest changes and review the same history.
